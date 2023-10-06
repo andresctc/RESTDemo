@@ -33,7 +33,7 @@ public class PersonaServiceImpl implements IPersonaService {
 	@Override
 	public void eliminar(Integer Id) {
 		//recuperar Entity persona
-		iPersonaDAOReposotiry.delete(null);
+		iPersonaDAOReposotiry.deleteById(Id);
 	}
 
 	@Override
@@ -42,9 +42,9 @@ public class PersonaServiceImpl implements IPersonaService {
 	}
 
 	@Override
-	public Optional<Persona> listarId(Integer Id) {
+	public Optional<Persona> listarId(Integer id) {
 		//recuperar Entity persona
-		return iPersonaDAOReposotiry.findOne(null);
+		return iPersonaDAOReposotiry.findById(id);
 	}
 
 }
